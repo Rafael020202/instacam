@@ -48,8 +48,29 @@ export const FormContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
-  
+  flex-direction: column;
+  align-items: center;
+  color: #E94E77;
+
   padding: 0.5rem;
+
+  section {
+    width: 100%;
+
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    font-size: 0.8rem;
+
+    font-weight: 400;
+
+    a:hover {
+      opacity: 0.8;
+    }
+  }
 
   strong {
     color: #D31900;
@@ -61,19 +82,18 @@ export const FormContainer = styled.div`
 
 export const Form = styled.form`
   display: flex;
-  flex: 1;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
   max-width: 500px;
-  
-  color: #E94E77;
 
   span {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: bolder;
     font-family: Satisfy, cursive; 
+    margin-bottom: 10px;
   }
 
   button {
@@ -96,24 +116,6 @@ export const Form = styled.form`
     svg {
       animation: ${rotate} 0.8s linear infinite;
       font-size: 2.5rem;
-    }
-  }
-
-  section {
-    width: 100%;
-
-    margin-top: 10px;
-
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-    font-size: 0.8rem;
-
-    font-weight: bolder;
-
-    a:hover {
-      opacity: 0.8;
     }
   }
 `;

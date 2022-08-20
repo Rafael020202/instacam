@@ -74,12 +74,12 @@ const SignIn: NextPage = () => {
             {error && <strong>Wrong email or password</strong>}
 
             <button>{loading ?<CgSpinnerAlt/> :'LOGIN'}</button>
-
-            <section>
-              <a>Forgot passowrd?</a>
-              <a>Sign up</a>
-            </section>
           </Form>
+
+          <section>
+            <a>Forgot passowrd?</a>
+            <a>Sign up</a>
+          </section>
         </FormContainer>  
     </Container>
   )
