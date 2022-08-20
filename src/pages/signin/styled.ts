@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const Container = styled.div`
   height: 100vh;
@@ -65,12 +74,21 @@ export const Form = styled.form`
     width: 100%;
     height: 58px;
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #E94E77;
     color: white;
     
     border-radius: 5px;
     
     font-size: 1.4rem;
+
+    svg {
+      animation: ${rotate} 0.8s linear infinite;
+      font-size: 2.5rem;
+    }
   }
 
   section {
