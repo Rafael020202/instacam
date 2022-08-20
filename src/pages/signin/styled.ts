@@ -73,6 +73,8 @@ export const Form = styled.form`
     width: 100%;
     height: 58px;
     
+    margin-top: 30px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,6 +94,8 @@ export const Form = styled.form`
 
   section {
     width: 100%;
+
+    margin-top: 10px;
 
     display: flex;
     justify-content: center;

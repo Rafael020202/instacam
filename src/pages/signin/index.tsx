@@ -68,12 +68,12 @@ const SignIn: NextPage = () => {
               value={data.password}
             />
 
+            <button>{loading ?<CgSpinnerAlt/> :'LOGIN'}</button>
+
             <section>
               <a>Forgot passowrd?</a>
               <a>Sign up</a>
             </section>
-
-            <button>{loading ?<CgSpinnerAlt/> :'LOGIN'}</button>
           </Form>
         </FormContainer>  
     </Container>
