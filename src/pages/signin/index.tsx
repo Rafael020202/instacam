@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useState, useRef, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
 import { CgSpinnerAlt } from 'react-icons/cg';
 import { FiEye } from 'react-icons/fi';
 
