@@ -71,7 +71,7 @@ const SignIn: NextPage = () => {
             <Input 
               label='Password'
               placeholder='Password'
-              type={showPassword ?'password' :'text'}
+              type={showPassword ?'text' :'password'}
               name='password'
               onChange={(e) => handleChange(e)}
               value={data.password}
