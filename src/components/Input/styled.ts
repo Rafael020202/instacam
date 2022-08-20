@@ -27,11 +27,17 @@ export const Content = styled.main<{isFilled:boolean}>`
 
   label {
     font-weight: 300;
+    font-size: 0.6rem;
   }
 
   input {
     flex: 1;
     height: 100%;
+    font-size: 0.9rem;
+    color: #413D3D;
+  }
+
+  span {
     font-size: 1rem;
   }
 `;
