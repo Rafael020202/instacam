@@ -7,6 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & + & {
+    margin-top: 10px;
+  }
 `;
 
 export const Content = styled.main<{isFilled:boolean}>`
