@@ -50,6 +50,13 @@ export const FormContainer = styled.div`
   justify-content: center;
   
   padding: 0.5rem;
+
+  strong {
+    color: #D31900;
+    width: 100%;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
 `;
 
 export const Form = styled.form`

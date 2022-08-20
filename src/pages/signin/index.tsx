@@ -15,6 +15,7 @@ interface Login {
 const SignIn: NextPage = () => {
   const [data, setData] = useState<Login>({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (event: FormEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -37,6 +38,8 @@ const SignIn: NextPage = () => {
       await signIn(data.email, data.password);
     } catch (error: any) {
       console.error('error', error.message);
+
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -67,6 +70,8 @@ const SignIn: NextPage = () => {
               onChange={(e) => handleChange(e)}
               value={data.password}
             />
+
+            {error && <strong>Wrong email or password</strong>}
 
             <button>{loading ?<CgSpinnerAlt/> :'LOGIN'}</button>
 
