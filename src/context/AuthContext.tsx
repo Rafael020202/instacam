@@ -46,7 +46,7 @@ export const AuthProvider: FC<Props> = ({ children}) => {
 
     setUser(null);
 
-    router.push('/sigin');
+    router.push('/signin');
   }
 
   useEffect(() => {
