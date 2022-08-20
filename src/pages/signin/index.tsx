@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useContext } from 'react';
 import { CgSpinnerAlt } from 'react-icons/cg';
 import { FiEye } from 'react-icons/fi';
 
+import { AuthContext } from '../../context/AuthContext';
 import { Container, BgLogin, FormContainer, Form } from './styled';
-
 import Input from '../../components/Input';
-import { signIn } from '../../utils/authentication';
 
 interface Login {
   email: string
@@ -14,6 +13,7 @@ interface Login {
 }
 
 const SignIn: NextPage = () => {
+  const { signIn } = useContext(AuthContext);
   const [data, setData] = useState<Login>({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
