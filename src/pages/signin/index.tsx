@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import { useState, FormEvent, useContext } from 'react';
+import { useRouter } from 'next/router';
+import { useState, FormEvent, useContext, useEffect } from 'react';
 import { CgSpinnerAlt } from 'react-icons/cg';
 import { FiEye } from 'react-icons/fi';
 
@@ -13,11 +14,16 @@ interface Login {
 }
 
 const SignIn: NextPage = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, user } = useContext(AuthContext);
   const [data, setData] = useState<Login>({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) router.push('/');
+  }, [user, router]);
 
   const handleChange = (event: FormEvent<HTMLInputElement>) => {
     event.preventDefault();
