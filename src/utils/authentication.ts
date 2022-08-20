@@ -15,4 +15,4 @@ const createUser = (email: string, password: string) => {
   return createUserWithEmailAndPassword(auth, email, password);
 }
 
-export { signIn, createUser };
+export { signIn, createUser, auth };
