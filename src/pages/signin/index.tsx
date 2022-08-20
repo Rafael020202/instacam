@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router';
 import { useState, FormEvent, useContext, useEffect } from 'react';
-import { CgSpinnerAlt } from 'react-icons/cg';
+import { AiOutlineLoading } from 'react-icons/ai';
 import { FiEye } from 'react-icons/fi';
 
 import { AuthContext } from '../../context/AuthContext';
@@ -87,7 +87,7 @@ const SignIn: NextPage = () => {
 
             {error && <strong>Wrong email or password</strong>}
 
-            <button>{loading ?<CgSpinnerAlt/> :'LOGIN'}</button>
+            <button>{loading ?<AiOutlineLoading/> :'LOGIN'}</button>
           </Form>
 
           <section>
