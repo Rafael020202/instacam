@@ -20,7 +20,7 @@ export const Content = styled.main<{isFilled:boolean}>`
   background-color: white;
   
   display: flex;
-  flex-direction: column;
+  align-items: center;
   
   border: ${ props => props.isFilled ? "1px solid #E94E77" :"1px solid rgb(239 239 239)"};
   border-radius: 10px;
@@ -34,14 +34,20 @@ export const Content = styled.main<{isFilled:boolean}>`
     font-size: 0.6rem;
   }
 
-  input {
+  div {
+    display: flex;
     flex: 1;
-    height: 100%;
-    font-size: 0.9rem;
-    color: #413D3D;
+    flex-direction: column;
+
+    input {
+      height: 100%;
+      font-size: 0.9rem;
+      color: #413D3D;
+    }
   }
 
-  span {
-    font-size: 1rem;
+  svg {
+    margin-left: 10px;
+    cursor: pointer;
   }
 `;
