@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5% !important;
 
     background-color: #fafafa;
+    color: #413D3D;
   }
 
   @media (max-width: 1080px) {
